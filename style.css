@@ -1,0 +1,430 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at center, #fef3c7, #fcd34d, #f59e0b);
+  color: #2d2d2d;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* Vertical Navigation */
+.nav {
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  margin: 1rem 0;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: #2d2d2d;
+  font-size: 1rem;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+}
+.nav ul li a:hover,
+.nav ul li a.active {
+  color: #facc15;
+  font-weight: 700;
+  position: relative;
+}
+.nav ul li a.active::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #facc15;
+  border-radius: 50%;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://via.placeholder.com/1200x800') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Parallax */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4rem;
+  text-align: center;
+  border-radius: 12px;
+}
+.hero-title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #facc15;
+}
+.hero-subtitle {
+  margin-top: 1rem;
+  color: #eee;
+  font-size: 1.2rem;
+}
+
+/* Sections */
+section {
+  padding: 8rem 2rem;
+  text-align: center;
+}
+section h2 {
+  font-size: 2.5rem;
+  color: #facc15;
+  margin-bottom: 1rem;
+}
+section p, section ul, section ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1rem;
+}
+section ul, section ol {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 0.8rem;
+  color: #555;
+  background: #fef3c7;
+}
+
+/* Scroll Animations */
+.animate {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.animate:nth-of-type(2) { transition-delay: 0.1s; }
+.animate:nth-of-type(3) { transition-delay: 0.2s; }
+.animate:nth-of-type(4) { transition-delay: 0.3s; }
+.animate:nth-of-type(5) { transition-delay: 0.4s; }
+.animate:nth-of-type(6) { transition-delay: 0.5s; }
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #facc15;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.2s;
+  z-index: 1000;
+}
+.back-to-top:hover {
+  transform: scale(1.1);
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #facc15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.loader {
+  border: 6px solid #fff;
+  border-top: 6px solid #000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+/* Hero with staircase-style background */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.hero-overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 4rem;
+  text-align: center;
+  border-radius: 12px;
+}
+.hero-title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #facc15;
+}
+.hero-subtitle {
+  margin-top: 1rem;
+  color: #eee;
+}
+
+/* Generic section backgrounds */
+.section-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+.section-bg .overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Hero (staircase style) */
+#hero {
+  background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* About (abstract tech lines) */
+#about {
+  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Functions (developer workspace) */
+#functions {
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Advantages (abstract glowing lights) */
+#advantages {
+  background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* For Whom (team collaboration) */
+#forwhom {
+  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* How Does It Work (network connections) */
+#how {
+  background-image: url('https://images.unsplash.com/photo-1497493292307-31c376b6e479');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Technologies (futuristic tech) */
+#tech {
+  background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Keep warm gradient background for body fallback */
+body {
+  background: radial-gradient(circle at center, #fef3c7, #fcd34d, #f59e0b);
+}
+/* Section backgrounds */
+.section-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  opacity: 0;              /* start hidden */
+  transition: opacity 1s ease-in-out; /* fade effect */
+}
+
+/* Overlay for readability */
+.section-bg .overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+/* When section is active (visible in viewport) */
+.section-bg.active {
+  opacity: 1;
+}
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #facc15;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, width 0.2s ease, height 0.2s ease, background 0.3s ease;
+  z-index: 3000;
+}
+
+/* Cursor hover effect on links */
+a:hover ~ .cursor,
+button:hover ~ .cursor {
+  width: 40px;
+  height: 40px;
+  background: rgba(250, 204, 21, 0.2);
+}
+/* Overlay improvements */
+.section-bg .overlay,
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.65); /* darker overlay for stronger contrast */
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Headings */
+.hero-title, section h2 {
+  color: #facc15; /* bright yellow accent */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* glow effect for visibility */
+}
+
+/* Subtitles and body text */
+.hero-subtitle, section p, section li, section ol {
+  color: #f1f5f9; /* light gray for readability */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* subtle shadow for clarity */
+}
+
+/* Lists */
+section ul, section ol {
+  text-align: left;
+  margin-top: 1rem;
+  padding-left: 2rem;
+}
+section li {
+  margin-bottom: 0.5rem;
+}
+/* Text fade-in base state */
+.overlay h2,
+.overlay p,
+.overlay li,
+.overlay ol,
+.hero-title,
+.hero-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* When section is visible */
+.animate.visible .overlay h2,
+.animate.visible .overlay p,
+.animate.visible .overlay li,
+.animate.visible .overlay ol,
+.animate.visible .hero-title,
+.animate.visible .hero-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Base fade-in state for text */
+.overlay h2,
+.overlay p,
+.overlay li,
+.overlay ol,
+.hero-title,
+.hero-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Visible state */
+.animate.visible .overlay h2,
+.animate.visible .overlay p,
+.animate.visible .overlay li,
+.animate.visible .overlay ol,
+.animate.visible .hero-title,
+.animate.visible .hero-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays */
+.animate.visible .overlay h2 { transition-delay: 0.1s; }
+.animate.visible .overlay p { transition-delay: 0.2s; }
+.animate.visible .overlay li:nth-child(1) { transition-delay: 0.3s; }
+.animate.visible .overlay li:nth-child(2) { transition-delay: 0.4s; }
+.animate.visible .overlay li:nth-child(3) { transition-delay: 0.5s; }
+.animate.visible .overlay li:nth-child(4) { transition-delay: 0.6s; }
+.animate.visible .overlay ol li:nth-child(1) { transition-delay: 0.3s; }
+.animate.visible .overlay ol li:nth-child(2) { transition-delay: 0.4s; }
+.animate.visible .overlay ol li:nth-child(3) { transition-delay: 0.5s; }
+.animate.visible .overlay ol li:nth-child(4) { transition-delay: 0.6s; }
+.animate.visible .hero-title { transition-delay: 0.1s; }
+.animate.visible .hero-subtitle { transition-delay: 0.2s; }
