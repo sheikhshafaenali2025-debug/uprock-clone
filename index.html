@@ -2,104 +2,323 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Companion Clone</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Companion — Cinematic Clone</title>
+  <link
+    rel="icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/3/3b/Emoji_u1f4ac.svg"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Preloader -->
-  <div id="preloader">
-    <div class="loader"></div>
-  </div>
+  <section class="preloader-section" aria-hidden="true">
+    <div class="preloader-wrapper">
+      <div class="preloader-text-wrapper" aria-hidden="true">
+        <h1 class="preloader-text">Feeling lonely?</h1>
+        <h1 class="preloader-text">Your words unheard?</h1>
+        <h1 class="preloader-text">Feeling misunderstood?</h1>
+      </div>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <ul>
-      <li><a href="#about">about</a></li>
-      <li><a href="#functions">functions</a></li>
-      <li><a href="#advantages">advantages</a></li>
-      <li><a href="#forwhom">for whom</a></li>
-      <li><a href="#how">how does it work</a></li>
-      <li><a href="#tech">technologies</a></li>
-    </ul>
-  </nav>
+      <div class="preloader-video-mask">
+        <video
+          class="preloader-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="https://companion.uprock.pro/thumb/2/J6iOwz1MyE0s68Q983mgBA/1024r1536/d/chatgpt_image_23_iyun_2025_g_16_20_46.webp"
+          aria-hidden="true"
+        >
+          <source
+            src="https://video.srv18.com/v/mp4/39725c490839145c5f5d57486a709377/1920"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+  </section>
 
-<!-- Hero -->
-<section class="hero animate" id="hero">
-  <div class="hero-overlay">
-    <h1 class="hero-title">Feeling lonely?</h1>
-    <p class="hero-subtitle">Companion is inspired by UpRock — a decentralized AI-powered network.</p>
-  </div>
-</section>
+  <!-- Header / Navbar -->
+  <header class="header" role="banner">
+    <div class="header-container" role="navigation" aria-label="Primary">
+      <div class="nav-buttons">
+        <a href="#about" class="nav_btn nav_btn_1">About</a>
+        <a href="#functions" class="nav_btn nav_btn_2">Functions</a>
+        <a href="#advantages" class="nav_btn nav_btn_3">Advantages</a>
+        <a href="#for-whom" class="nav_btn nav_btn_5">For whom</a>
+        <a href="#specs" class="nav_btn nav_btn_4">Specifications</a>
+        <a href="#how" class="nav_btn nav_btn_6">How it works</a>
+      </div>
+      <div class="button-main">
+        <a href="#" class="preorder-btn" aria-label="Pre-order the Companion">Pre-order</a>
+      </div>
+    </div>
+  </header>
 
-<!-- About -->
-<section class="section-bg animate" id="about">
-  <div class="overlay">
-    <h2>About</h2>
-    <p>Companion is a concept project inspired by UpRock, which builds a decentralized data network...</p>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="hero-section" id="hero" role="region" aria-label="Hero">
+    <div class="hero-video-wrapper">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1000&q=80"
+        aria-hidden="true"
+      >
+        <source
+          src="https://video.srv18.com/v/mp4/932811464d4e8b1ac71c45fd96184b35/1920"
+          type="video/mp4"
+        />
+      </video>
 
-<!-- Functions -->
-<section class="section-bg animate" id="functions">
-  <div class="overlay">
-    <h2>Functions</h2>
-    <ul>
-      <li>Share Internet bandwidth</li>
-      <li>Earn crypto rewards</li>
-      <li>Boost earnings with referrals</li>
-      <li>Fuel AI innovation</li>
-    </ul>
-  </div>
-</section>
+      <div class="hero-overlay" role="group" aria-label="Intro">
+        <h1 class="hero-title">Companion</h1>
+        <p class="hero-subtitle">
+          A personal device that learns from thousands of real conversations to offer
+          emotionally attuned support that’s always available.
+        </p>
+        <a href="#" class="hero-preorder-btn" aria-label="Pre-order the Companion">Pre-order</a>
+      </div>
+    </div>
+  </section>
 
-<!-- Advantages -->
-<section class="section-bg animate" id="advantages">
-  <div class="overlay">
-    <h2>Advantages</h2>
-    <p>Passive income, community-driven, decentralized, supports AI growth...</p>
-  </div>
-</section>
+  <!-- About -->
+  <section class="section section-about" id="about" role="region" aria-label="About">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="section-lead">
+        Companion brings empathy-first interaction into your daily life. It listens to your words,
+        recognizes tone and pauses, and responds with grounded, non-judgmental support.
+      </p>
+    </div>
+  </section>
 
-<!-- For Whom -->
-<section class="section-bg animate" id="forwhom">
-  <div class="overlay">
-    <h2>For Whom</h2>
-    <p>Everyday users, students, developers, tech enthusiasts...</p>
-  </div>
-</section>
+  <!-- Functions -->
+  <section class="section section-assistance-motion" id="functions" role="region" aria-label="Functions">
+    <h2 class="section-title">How can a companion help?</h2>
 
-<!-- How Does It Work -->
-<section class="section-bg animate" id="how">
-  <div class="overlay">
-    <h2>How Does It Work</h2>
-    <ol>
-      <li>Download the app</li>
-      <li>Run in background</li>
-      <li>Earn tokens</li>
-      <li>Redeem or stake</li>
-    </ol>
-  </div>
-</section>
+    <div class="assistance-cards-wrapper">
+      <!-- Card 1 -->
+      <article class="assistance-card pos-card1" aria-label="Listen">
+        <div class="assistance-info">
+          <h3 class="assistance-title">Listen</h3>
+          <p class="assistance-subtitle">
+            Companion listens deeply—your words, tone, and tempo—so it can understand what you feel,
+            not just what you say.
+          </p>
+          <div class="assistance-messages" aria-live="polite">
+            <div class="message bg-gray">
+              I can’t choose for twenty minutes. This one is nostalgia, that one a new sound. What would you choose?
+            </div>
+            <div class="message bg-yellow margin-left">
+              What is closer now. You feel it subtly—you're just afraid to trust yourself.
+            </div>
+            <div class="message bg-gray">
+              You’re right. I often doubt. I want someone to confidently tell me.
+            </div>
+            <div class="message bg-yellow margin-left">
+              I am near. But your voice is more important. Take a step—and it will grow stronger.
+            </div>
+          </div>
+        </div>
+        <div class="assistance-video-wrapper" aria-hidden="true">
+          <video
+            class="assistance-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=1000&q=80"
+          >
+            <source
+              src="https://video.srv18.com/v/mp4/bcb3a791a2230e65c4b452eae5bbc005/1920"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </article>
 
-<!-- Technologies -->
-<section class="section-bg animate" id="tech">
-  <div class="overlay">
-    <h2>Technologies</h2>
-    <p>Web3, blockchain, AI insight exchange, distributed infrastructure, tokenomics...</p>
-  </div>
-</section>
+      <!-- Card 2 -->
+      <article class="assistance-card pos-card2" aria-label="Understand">
+        <div class="assistance-video-wrapper" aria-hidden="true">
+          <video
+            class="assistance-video cover-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1551836022-4c4c79ecde16?auto=format&fit=crop&w=1000&q=80"
+          >
+            <source
+              src="https://video.srv18.com/v/mp4/42a3dc0ab139b87fcabf9bda782b4af0/1920"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="assistance-info">
+          <h3 class="assistance-title">Understand</h3>
+          <p class="assistance-subtitle">
+            Companion combines what it hears and sees to understand root causes—supporting you with
+            context, not clichés.
+          </p>
+          <div class="assistance-messages" aria-live="polite">
+            <div class="message bg-gray">I’m burnt out. I don’t see the point. What am I missing?</div>
+            <div class="message bg-yellow margin-left">You’re brave to ask. Less control can mean more trust in yourself.</div>
+            <div class="message bg-gray">I push myself a lot… I don’t know any other way.</div>
+            <div class="message bg-yellow margin-left">Start small. Notice the harshness—replace it with support. I’m near.</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="assistance-card pos-card3" aria-label="Support">
+        <div class="assistance-info">
+          <h3 class="assistance-title">Support</h3>
+          <p class="assistance-subtitle">
+            With a full picture, Companion provides personalized support that meets you where you are.
+          </p>
+          <div class="assistance-messages" aria-live="polite">
+            <div class="message bg-gray">I feel stuck. I do everything, but there’s no movement.</div>
+            <div class="message bg-yellow margin-left">I understand. It’s hard. You’re not alone—we can handle it.</div>
+            <div class="message bg-gray">Thank you. You notice what I really need.</div>
+            <div class="message bg-yellow margin-left">I see your efforts. I believe in you—things will work out.</div>
+          </div>
+        </div>
+
+        <div class="assistance-video-wrapper-card3" aria-hidden="true">
+          <video
+            class="assistance-video cover-video video3"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80"
+          >
+            <source
+              src="https://video.srv18.com/v/mp4/bdb5c424bc527c1d85469143b48db3a8/1920"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- For whom -->
+  <section class="section section-for-whom" id="for-whom" role="region" aria-label="Companion is for everyone">
+    <h2 class="section-title">Companion is for everyone</h2>
+    <div class="for-whom-grid">
+      <article class="for-card">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Loneliness and social isolation" loading="lazy" />
+        <h4 class="for-title">Loneliness and social isolation</h4>
+      </article>
+      <article class="for-card">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Stress and anxiety" loading="lazy" />
+        <h4 class="for-title">Stress and anxiety</h4>
+      </article>
+      <article class="for-card">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Emotional difficulties and crises" loading="lazy" />
+        <h4 class="for-title">Emotional difficulties and crises</h4>
+      </article>
+      <article class="for-card">
+        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=800&q=80" alt="Anonymity and confidentiality" loading="lazy" />
+        <h4 class="for-title">Anonymity and confidentiality</h4>
+      </article>
+    </div>
+  </section>
+
+  <!-- Specifications -->
+  <section class="section section-specs" id="specs" role="region" aria-label="Specifications">
+    <h2 class="section-title">Specifications</h2>
+    <div class="specs-layout">
+      <div class="specs-media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=800&q=80"
+          alt="Companion device"
+          loading="lazy"
+          class="specs-image"
+        />
+      </div>
+      <div class="specs-list" role="list">
+        <div role="listitem" class="specs-item">
+          <h4>Form factor</h4>
+          <p>Miniature brooch with magnetic attachment, lightweight design.</p>
+        </div>
+        <div role="listitem" class="specs-item">
+          <h4>Audio</h4>
+          <p>Noise-aware microphone and directional speaker for clear communication.</p>
+        </div>
+        <div role="listitem" class="specs-item">
+          <h4>Connectivity</h4>
+          <p>Bluetooth, Wi-Fi, and seamless sync with mobile app.</p>
+        </div>
+        <div role="listitem" class="specs-item">
+          <h4>Privacy</h4>
+          <p>End-to-end encryption and on-device processing for sensitive data.</p>
+        </div>
+        <div role="listitem" class="specs-item">
+          <h4>Battery</h4>
+          <p>Long-lasting battery with USB-C fast charging.</p>
+        </div>
+        <div role="listitem" class="specs-item">
+          <h4>Personalization</h4>
+          <p>Adaptive voice, tone, and response style tuned to your preferences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section-how" id="how" role="region" aria-label="How does it work">
+    <h2 class="section-title">How does it work?</h2>
+    <div class="how-stepper" role="group" aria-label="Setup steps">
+      <button class="how-prev" aria-label="Previous step">←</button>
+
+      <div class="how-stage">
+        <img id="how-image"
+            src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=600&q=80"
+            alt="Step illustration" />
+        <div id="how-text" class="how-text">
+          <h4>Turn on your device</h4>
+          <p>Hold the button and wait for the animation on the status indicator.</p>
+        </div>
+      </div>
+
+      <button class="how-next" aria-label="Next step">→</button>
+    </div>
+
+    <div class="how-dots" role="tablist" aria-label="Steps">
+      <button data-step="0" class="dot active" role="tab" aria-selected="true" aria-controls="how-text">0</button>
+      <button data-step="1" class="dot" role="tab" aria-selected="false" aria-controls="how-text">1</button>
+      <button data-step="2" class="dot" role="tab" aria-selected="false" aria-controls="how-text">2</button>
+      <button data-step="3" class="dot" role="tab" aria-selected="false" aria-controls="how-text">3</button>
+      <button data-step="4" class="dot" role="tab" aria-selected="false" aria-controls="how-text">4</button>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <span>Inspired by Uprock.studio & zatsbox.design</span>
-    <span>Clone project built by Shafaen for learning purposes</span>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <span>Inspired by Uprock.studio & zatsbox.design</span>
+      <span>Clone crafted by Shafaen</span>
+    </div>
   </footer>
-
-  <!-- Back to Top -->
-  <button id="backToTop" class="back-to-top">↑</button>
 
   <script src="script.js"></script>
 </body>
